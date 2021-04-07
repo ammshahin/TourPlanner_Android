@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "691873583430",
+    "project_id": "tour-planner-eab59",
+    "storage_bucket": "tour-planner-eab59.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:691873583430:android:555327f7f641ec2c4cd547",
+        "android_client_info": {
+          "package_name": "com.example.tourplanner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "691873583430-k2uj1n22qvvjjsemvn60vjuj338vktdq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuIcc_Pw_Pc3k0sfhuK7GabxFlDquRt1g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "691873583430-k2uj1n22qvvjjsemvn60vjuj338vktdq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
