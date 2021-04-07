@@ -38,6 +38,8 @@ dependencies {
     implementation 'androidx.wear:wear:1.1.0'
     implementation 'com.google.firebase:firebase-auth:20.0.3'
     implementation 'com.google.firebase:firebase-firestore:22.1.2'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:design:28.0.0'
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
@@ -50,4 +52,6 @@ dependencies {
     //Cardview
     implementation "androidx.cardview:cardview:1.0.0"
     compileOnly 'com.google.android.wearable:wearable:2.8.1'
+
+
 }

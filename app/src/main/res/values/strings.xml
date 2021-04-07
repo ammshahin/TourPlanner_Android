@@ -9,4 +9,6 @@
     -->
     <string name="hello_world">Hello Square World!</string>
     <string name="title_activity_login">login</string>
+    <string name="open">open</string>
+    <string name="close">close</string>
 </resources>
