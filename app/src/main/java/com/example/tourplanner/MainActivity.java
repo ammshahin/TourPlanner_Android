@@ -7,20 +7,24 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
     NavigationView navView;
     ActionBarDrawerToggle myToggle;
     DrawerLayout myDrawer;
+    FirebaseAuth myAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        myAuth = FirebaseAuth.getInstance();
 
         Toolbar toolbar = findViewById(R.id.toolId);
         setSupportActionBar(toolbar);
@@ -47,6 +51,12 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.contactId:
                         Toast.makeText(getApplicationContext(),"Contact page is opened!",Toast.LENGTH_SHORT).show();
                         myDrawer.closeDrawer(GravityCompat.START);
+                        break;
+                    case R.id.logoutId:
+                        Toast.makeText(getApplicationContext(),"Logged Out Succesfully",Toast.LENGTH_LONG).show();
+                        myDrawer.closeDrawer(GravityCompat.START);
+                        myAuth.getInstance().signOut();
+                        startActivity(new Intent(MainActivity.this,login.class));
                         break;
                 }
                 return true;
