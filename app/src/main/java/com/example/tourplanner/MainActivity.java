@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -37,28 +38,33 @@ public class MainActivity extends AppCompatActivity {
         myToggle.syncState();
 
         navView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            Fragment myFrag;
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()){
                     case R.id.menuId:
                         Toast.makeText(getApplicationContext(),"home is opened!",Toast.LENGTH_SHORT).show();
-                        myDrawer.closeDrawer(GravityCompat.START);
+                        myFrag = new homeFragment();
                         break;
                     case R.id.itemId:
+                        myFrag = new placesFragment();
                         Toast.makeText(getApplicationContext(),"Items is opened!",Toast.LENGTH_SHORT).show();
-                        myDrawer.closeDrawer(GravityCompat.START);
                         break;
                     case R.id.contactId:
                         Toast.makeText(getApplicationContext(),"Contact page is opened!",Toast.LENGTH_SHORT).show();
-                        myDrawer.closeDrawer(GravityCompat.START);
                         break;
                     case R.id.logoutId:
+                        myFrag = new placesFragment();
                         Toast.makeText(getApplicationContext(),"Logged Out Succesfully",Toast.LENGTH_LONG).show();
-                        myDrawer.closeDrawer(GravityCompat.START);
                         myAuth.getInstance().signOut();
                         startActivity(new Intent(MainActivity.this,login.class));
                         break;
+                    case R.id.createId:
+                        startActivity(new Intent(MainActivity.this, insertPlace.class));
+                        break;
                 }
+                getSupportFragmentManager().beginTransaction().replace(R.id.containerId, myFrag).commit();
+                myDrawer.closeDrawer(GravityCompat.START);
                 return true;
             }
         });

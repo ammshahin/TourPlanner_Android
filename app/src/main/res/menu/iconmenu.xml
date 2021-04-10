@@ -5,7 +5,10 @@
     android:title="Home"/>
     <item android:id="@+id/itemId"
         android:icon="@drawable/ic_baseline_view_list_24"
-        android:title="Items"/>
+        android:title="Places"/>
+    <item android:id="@+id/createId"
+        android:icon="@drawable/ic_baseline_create_new_folder_24"
+        android:title="Insert Place"/>
     <item android:id="@+id/contactId"
         android:icon="@drawable/ic_baseline_perm_contact_calendar_24"
         android:title="Contact Us"/>

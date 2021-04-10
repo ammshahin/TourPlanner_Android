@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:id="@+id/drawerId"
     tools:openDrawer="start"
     tools:context=".MainActivity">
@@ -12,14 +11,20 @@
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
-
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/containerId"
+            />
         <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/toolId"
             app:title="Tour Planner"
-            android:background="@color/teal_200"
-            app:titleTextColor="@color/white"/>
+            app:titleTextColor="@color/cardview_light_background"
+            android:background="@color/teal_200"/>
+
+
     </RelativeLayout>
 
     <com.google.android.material.navigation.NavigationView
