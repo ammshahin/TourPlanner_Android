@@ -40,6 +40,5 @@
         android:layout_height="wrap_content"
         android:text="Submit"
         android:id="@+id/submitPlaceId"
-        android:onClick="createPlace"
         android:layout_gravity="center"/>
 </LinearLayout>

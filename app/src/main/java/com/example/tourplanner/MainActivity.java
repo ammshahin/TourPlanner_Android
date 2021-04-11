@@ -33,6 +33,9 @@ public class MainActivity extends AppCompatActivity {
         navView = findViewById(R.id.navId);
         myDrawer = findViewById(R.id.drawerId);
 
+        getSupportFragmentManager().beginTransaction().replace(R.id.containerId, new homeFragment()).commit();
+
+
         myToggle = new ActionBarDrawerToggle(this, myDrawer, toolbar,R.string.open,R.string.close);
         myDrawer.addDrawerListener(myToggle);
         myToggle.syncState();

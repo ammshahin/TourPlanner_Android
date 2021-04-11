@@ -24,9 +24,7 @@ public class register extends AppCompatActivity {
     Button submitButton,alreadyRegistered;
     EditText name,email,password,phone;
     FirebaseAuth myAuth;
-    ProgressBar myBar;
-
-
+    boolean valid = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,16 +35,23 @@ public class register extends AppCompatActivity {
 
         submitButton =  findViewById(R.id.submitId);
         alreadyRegistered =  findViewById(R.id.alreadyRegisterdeBt);
-        myBar =  findViewById(R.id.proId);
 
         name = findViewById(R.id.nameId);
         email = findViewById(R.id.emailId);
         password = findViewById(R.id.passId);
         phone = findViewById(R.id.mobileId);
 
+
+
         submitButton.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
+                checkField(name);
+                checkField(email);
+                checkField(password);
+                checkField(phone);
+                if(valid){
                     myAuth.createUserWithEmailAndPassword(email.getText().toString(),password.getText().toString())
                             .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                                 @Override
@@ -61,22 +66,10 @@ public class register extends AppCompatActivity {
                             Toast.makeText(register.this,"OOps something wrong!",Toast.LENGTH_LONG).show();
                         }
                     });
+                }else {
+                    Toast.makeText(getApplicationContext(),"Please fill all the fields",Toast.LENGTH_LONG).show();
+                }
 
-//                    myAuth.signInWithEmailAndPassword(email.getText().toString(),password.getText().toString())
-//                            .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
-//                                @Override
-//                                public void onSuccess(AuthResult authResult) {
-//                                    Toast.makeText(register.this,"Wow! you signed up succesfully",Toast.LENGTH_LONG).show();
-//                                    startActivity(new Intent(register.this, MainActivity.class));
-//                                    finish();
-//                                }
-//                            }).addOnFailureListener(new OnFailureListener() {
-//                        @Override
-//                        public void onFailure(@NonNull Exception e) {
-//                            Toast.makeText(register.this,"OOps something wrong!",Toast.LENGTH_LONG).show();
-//
-//                        }
-//                    });
 
 
             }
@@ -89,17 +82,18 @@ public class register extends AppCompatActivity {
             }
         });
 
+
+    }
+    public boolean checkField(EditText textField){
+        if(textField.getText().toString().isEmpty()){
+            textField.setError("Error");
+            valid = false;
+        }else {
+            valid = true;
+        }
+
+        return valid;
     }
 
 
-
-//    public void submitFunction(View view) {
-//
-//    }
-
-
-//    public void alreadyRegisterdFunction(View view) {
-//        startActivity(new Intent(register.this,
-//                login.class));
-//    }
 }

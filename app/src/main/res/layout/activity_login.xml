@@ -4,51 +4,81 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#121212"
     android:orientation="vertical"
-    android:padding="20dp"
     tools:context=".login"
     tools:deviceIds="wear">
 
-
-    <EditText
-        android:id="@+id/email_login"
-        android:layout_marginTop="250dp"
+    <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="Email "/>
+        android:src="@drawable/tourplanner"/>
 
-    <EditText
-        android:id="@+id/pass_login"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Password"
-        android:inputType="textPassword" />
+        android:padding="20dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/email_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00BCD4"
+            android:ems="10"
+            android:hint="Email "
+            android:inputType="textPersonName"
+            android:layout_marginBottom="5dp"
+
+            android:padding="10dp"
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF" />
+
+        <EditText
+            android:id="@+id/pass_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00BCD4"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+
 
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/signBtId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="#FFEB3B"
         android:text="Sign in"
-        android:textStyle="bold"
-        android:textSize="30sp" />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Don't Have an account!"
         android:textSize="25dp"
-        android:layout_marginLeft="50dp"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/signUpBtId"
-        android:text="Sign up"
         android:textStyle="bold"
-        android:textSize="30sp" />
+        app:icon="@drawable/ic_baseline_login_24"
+        app:iconTint="#83E611" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Don't Have an account!"
+        android:textColor="#FFFFFF"
+        android:textSize="15dp" />
+
+    <Button
+        android:id="@+id/signUpBtId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="#F4105E"
+        android:text="Sign up"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:icon="@drawable/ic_baseline_perm_contact_calendar_24" />
 
 
 </LinearLayout>

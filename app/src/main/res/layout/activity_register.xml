@@ -4,69 +4,90 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#121212"
+
     android:orientation="vertical"
-    android:padding="20dp"
     tools:context=".register"
     tools:deviceIds="wear">
 
-
-    <EditText
-        android:id="@+id/nameId"
-        android:layout_marginTop="180dp"
+    <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="Full Name"/>
-    <EditText
-        android:id="@+id/emailId"
+        android:src="@drawable/tourplanner"/>
 
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="Email "/>
+        android:padding="20dp"
+        android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/passId"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Password"
-        android:inputType="textPassword" />
-    <EditText
-        android:id="@+id/mobileId"
+        <EditText
+            android:id="@+id/nameId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/teal_700"
+            android:textColor="@color/white"
+            android:ems="10"
+            android:hint="Full Name"
+            android:layout_marginBottom="3dp"
+            android:inputType="textPersonName"
+            android:padding="5dp" />
 
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="Mobile"/>
+        <EditText
+            android:id="@+id/emailId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/teal_700"
+            android:textColor="@color/white"
+            android:layout_marginBottom="3dp"
+            android:ems="10"
+            android:hint="Email "
+            android:inputType="textPersonName"
+            android:padding="5dp" />
+
+        <EditText
+            android:id="@+id/passId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/teal_700"
+            android:layout_marginBottom="3dp"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="5dp" />
+
+        <EditText
+            android:id="@+id/mobileId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:background="@color/teal_700"
+            android:ems="10"
+            android:hint="Mobile No"
+            android:inputType="textPersonName"
+            android:padding="5dp" />
+    </LinearLayout>
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/submitId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="#EF0C59"
         android:text="Sign Up"
-        android:textStyle="bold"
-        android:textSize="30sp"
-       />
+        android:textSize="25dp"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/alreadyRegisterdeBt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#FFFFFF"
-        android:text="Already Registered?"
-        android:textColor="#352C2C" />
-
-
-    <ProgressBar
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/proId"
-        android:visibility="invisible"
-        android:layout_marginLeft="180dp"/>
+        android:layout_gravity="center"
+        android:backgroundTint="#8CF315"
+        android:text="Already Registered?"
+        android:textColor="@color/white" />
+
+
 
 
 </LinearLayout>
