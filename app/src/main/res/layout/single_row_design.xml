@@ -1,65 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="10dp"
     android:elevation="8dp"
+    app:cardCornerRadius="10dp"
     app:cardUseCompatPadding="true">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#1B5771"
         android:padding="15dp">
+
         <ImageView
+            android:id="@+id/img1"
             android:layout_width="120dp"
             android:layout_height="130dp"
-            android:src="@mipmap/ic_launcher"
-            android:id="@+id/img1"/>
+            android:src="@mipmap/ic_launcher" />
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/nametext"
-            android:text="This is Demo Name"
-            android:textStyle="bold"
-            android:textSize="25sp"
-            android:textColor="#000"
-            android:layout_toRightOf="@id/img1"
-            android:layout_marginLeft="10dp"/>
-
-        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/img1"
+            android:text="Name"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <TextView
             android:id="@+id/priceText"
-            android:text="This is Course Name"
-            android:textSize="25sp"
-            android:textColor="#000"
-            android:layout_toRightOf="@id/img1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_below="@id/nametext"
-            android:layout_marginLeft="10dp"/>
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/img1"
+            android:text="Price"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
 
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/offerText"
-            android:text="This is Email Name"
-            android:textSize="25sp"
-            android:textColor="#000"
-            android:layout_toRightOf="@id/img1"
-            android:layout_below="@id/priceText"
-            android:layout_marginLeft="10dp"/>
-        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/detailsText"
-            android:text="This is Email Name"
-            android:textSize="25sp"
-            android:textColor="#000"
+            android:layout_below="@id/priceText"
+            android:layout_marginLeft="10dp"
             android:layout_toRightOf="@id/img1"
-            android:layout_below="@id/offerText"
-            android:layout_marginLeft="10dp"/>
+            android:text="Offers"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+        <!--        <TextView-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:id="@+id/detailsText"-->
+        <!--            android:text="This is Email Name"-->
+        <!--            android:textSize="25sp"-->
+        <!--            android:textColor="#000"-->
+        <!--            android:layout_toRightOf="@id/img1"-->
+        <!--            android:layout_below="@id/offerText"-->
+        <!--            android:layout_marginLeft="10dp"/>-->
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>
