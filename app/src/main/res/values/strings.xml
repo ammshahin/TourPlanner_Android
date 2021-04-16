@@ -12,4 +12,5 @@
     <string name="open">open</string>
     <string name="close">close</string>
     <string name="title_activity_insert_place">insertPlace</string>
+    <string name="title_activity_splash_screen">splashScreen</string>
 </resources>

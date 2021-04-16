@@ -4,41 +4,56 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#00BCD4"
     android:orientation="vertical"
     android:padding="30dp"
     tools:context=".insertPlace"
     tools:deviceIds="wear">
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter Place Name"
-        android:layout_marginTop="50dp"
-        android:id="@+id/placeNameId"/>
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter Price"
-        android:id="@+id/placePriceId"/>
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter Place Offers"
-        android:id="@+id/placeOfferId"/>
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter Place Details"
-        android:id="@+id/placeDetailsId"/>
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter Image Url"
-        android:id="@+id/placeImageId"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Submit"
+        android:id="@+id/homeBtId"
+        android:text="Home"
+        android:textColor="#FFEB3B"
+        app:icon="@drawable/ic_baseline_home_24"
+        app:iconTint="#8BC34A" />
+    <EditText
+        android:id="@+id/placeNameId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:hint="Enter Place Name" />
+
+    <EditText
+        android:id="@+id/placePriceId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Price" />
+
+    <EditText
+        android:id="@+id/placeOfferId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Place Offers" />
+
+    <EditText
+        android:id="@+id/placeDetailsId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Place Details" />
+
+    <EditText
+        android:id="@+id/placeImageId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Image Url(end with .jpg/.png)" />
+
+    <Button
         android:id="@+id/submitPlaceId"
-        android:layout_gravity="center"/>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="25dp"
+        android:text="Submit" />
 </LinearLayout>

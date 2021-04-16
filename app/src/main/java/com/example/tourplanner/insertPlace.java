@@ -15,7 +15,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class insertPlace extends AppCompatActivity {
     EditText pName, pPrice, pOffer, pDetails, pImgUrl;
-    Button submit;
+    Button submit,home;
     boolean valid = true;
 
     @Override
@@ -29,6 +29,15 @@ public class insertPlace extends AppCompatActivity {
         pDetails = findViewById(R.id.placeDetailsId);
         pImgUrl = findViewById(R.id.placeImageId);
         submit = findViewById(R.id.submitPlaceId);
+        home = findViewById(R.id.homeBtId);
+
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                Toast.makeText(getApplicationContext(),"Returned home!", Toast.LENGTH_LONG).show();
+            }
+        });
 
         submit.setOnClickListener(new View.OnClickListener() {
 

@@ -26,22 +26,25 @@
             android:value="true" />
 
         <activity
-            android:name=".insertPlace"
-            android:label="@string/title_activity_insert_place">
-
-        </activity>
-        <activity
-            android:name=".register"
-            android:label="@string/title_activity_register"></activity>
-        <activity
-            android:name=".login"
-            android:label="@string/title_activity_login"></activity>
-        <activity android:name=".MainActivity">
+            android:name=".splashScreen"
+            android:label="@string/title_activity_splash_screen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".insertPlace"
+            android:label="@string/title_activity_insert_place"></activity>
+        <activity
+            android:name=".register"
+            android:label="@string/title_activity_register" />
+        <activity
+            android:name=".login"
+            android:label="@string/title_activity_login" />
+        <activity android:name=".MainActivity">
+
         </activity>
     </application>
 
