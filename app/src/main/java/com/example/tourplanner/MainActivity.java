@@ -53,11 +53,10 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case R.id.itemId:
                         myFrag = new placesFragment();
-                        Toast.makeText(getApplicationContext(),"Items is opened!",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(),"Click the images to see details",Toast.LENGTH_LONG).show();
                         break;
-                    case R.id.contactId:
+                    case R.id.locateId:
                         startActivity(new Intent(MainActivity.this,mapLocation.class));
-                        Toast.makeText(getApplicationContext(),"Contact page is opened!",Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.logoutId:
                         myFrag = new placesFragment();

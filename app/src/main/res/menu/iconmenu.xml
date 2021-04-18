@@ -9,7 +9,7 @@
     <item android:id="@+id/createId"
         android:icon="@drawable/ic_baseline_create_new_folder_24"
         android:title="Add New Place"/>
-    <item android:id="@+id/contactId"
+    <item android:id="@+id/locateId"
         android:icon="@drawable/ic_baseline_pin_drop_24"
         android:title="Locate Me"/>
     <item android:id="@+id/logoutId"

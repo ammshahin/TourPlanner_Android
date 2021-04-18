@@ -41,18 +41,19 @@
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:layout_gravity="center"
-           android:text="Price"
-           android:textColor="#FFEB3B"
+           android:text="Offers"
+           android:textColor="#8BC34A"
            android:textSize="30dp" />
 
        <TextView
            android:id="@+id/detailHolder"
+           android:padding="10dp"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:layout_gravity="center"
            android:text="Details"
            android:textColor="#FF5722"
-           android:textSize="30dp" />
+           android:textSize="20dp" />
 
    </LinearLayout>
 </FrameLayout>
