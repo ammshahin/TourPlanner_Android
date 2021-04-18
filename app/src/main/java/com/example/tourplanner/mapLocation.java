@@ -82,6 +82,7 @@ public class mapLocation extends AppCompatActivity {
             return;
         }
         Task<Location> task = client.getLastLocation();
+
         task.addOnSuccessListener(new OnSuccessListener<Location>() {
             @Override
             public void onSuccess(final Location location) {
@@ -91,7 +92,7 @@ public class mapLocation extends AppCompatActivity {
                         LatLng latLng = new LatLng(location.getLatitude(),location.getLongitude());
                         MarkerOptions markerOptions = new MarkerOptions().position(latLng).title("You are here...!!");
                         googleMap.addMarker(markerOptions);
-                        googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng,15));
+                        googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng,17));
                     }
                 });
             }

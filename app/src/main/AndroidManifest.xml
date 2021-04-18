@@ -37,11 +37,7 @@
         <activity
             android:name=".mapLocation"
             android:label="@string/title_activity_map_location">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
 
@@ -49,7 +45,13 @@
 
         <activity
             android:name=".splashScreen"
-            android:label="@string/title_activity_splash_screen"></activity>
+            android:label="Tour Planner">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".insertPlace"
             android:label="@string/title_activity_insert_place" />
