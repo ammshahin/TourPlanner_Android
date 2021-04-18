@@ -13,4 +13,6 @@
     <string name="close">close</string>
     <string name="title_activity_insert_place">insertPlace</string>
     <string name="title_activity_splash_screen">splashScreen</string>
+    <string name="title_activity_google_map">googleMap</string>
+    <string name="title_activity_map_location">mapLocation</string>
 </resources>

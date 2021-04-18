@@ -8,10 +8,10 @@
         android:title="Places"/>
     <item android:id="@+id/createId"
         android:icon="@drawable/ic_baseline_create_new_folder_24"
-        android:title="Insert Place"/>
+        android:title="Add New Place"/>
     <item android:id="@+id/contactId"
-        android:icon="@drawable/ic_baseline_perm_contact_calendar_24"
-        android:title="Contact Us"/>
+        android:icon="@drawable/ic_baseline_pin_drop_24"
+        android:title="Locate Me"/>
     <item android:id="@+id/logoutId"
         android:icon="@drawable/ic_baseline_login_24"
         android:title="Logout"/>

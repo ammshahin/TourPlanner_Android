@@ -4,8 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
-import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 public class splashScreen extends AppCompatActivity {
@@ -20,7 +18,7 @@ public class splashScreen extends AppCompatActivity {
        new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
            @Override
            public void run() {
-               startActivity(new Intent(getApplicationContext(),MainActivity.class));
+               startActivity(new Intent(getApplicationContext(),login.class));
                finish();
            }
        }, 3000);

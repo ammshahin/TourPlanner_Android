@@ -6,6 +6,10 @@
 
     <uses-feature android:name="android.hardware.type.watch" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -13,6 +17,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TourPlanner">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCO5lYM4BlRIQ1L79Wcfk_iQ5Rep2y7Qt8" />
+
         <uses-library
             android:name="com.google.android.wearable"
             android:required="false" />
@@ -26,17 +35,24 @@
             android:value="true" />
 
         <activity
-            android:name=".splashScreen"
-            android:label="@string/title_activity_splash_screen">
+            android:name=".mapLocation"
+            android:label="@string/title_activity_map_location">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
+
+
+        <activity
+            android:name=".splashScreen"
+            android:label="@string/title_activity_splash_screen"></activity>
         <activity
             android:name=".insertPlace"
-            android:label="@string/title_activity_insert_place"></activity>
+            android:label="@string/title_activity_insert_place" />
         <activity
             android:name=".register"
             android:label="@string/title_activity_register" />

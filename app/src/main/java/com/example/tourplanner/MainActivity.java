@@ -56,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(),"Items is opened!",Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.contactId:
+                        startActivity(new Intent(MainActivity.this,mapLocation.class));
                         Toast.makeText(getApplicationContext(),"Contact page is opened!",Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.logoutId:
